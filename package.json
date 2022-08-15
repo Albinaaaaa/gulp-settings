@@ -1,0 +1,23 @@
+{
+  "name": "gulp-settings",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Albinaaaaa/gulp-settings.git"
+  },
+  "author": "Albina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Albinaaaaa/gulp-settings/issues"
+  },
+  "homepage": "https://github.com/Albinaaaaa/gulp-settings#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
