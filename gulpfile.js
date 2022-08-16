@@ -11,6 +11,15 @@ global.app = {
 
 // import the task
 import { copy } from "./gulp/tasks/copy.js";
+import { reset } from "./gulp/tasks/reset.js";
+
+// watcher for the changes in files
+function watcher() {
+  gulp.watch(path.watch.files, copy);
+}
+
+// scenery building execution tasks
+const dev = gulp.series(reset, copy, watcher);
 
 // performing the scenery by default
-gulp.task("default", copy);
+gulp.task("default", dev);

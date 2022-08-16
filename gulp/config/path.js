@@ -13,8 +13,10 @@ export const path = {
   src: {
     files: `${srcFolder}/files/**/*.*`,
   }, // original
-  watch: {}, // folders and files need to watch for gulp
-  clean: {},
+  watch: {
+    files: `${srcFolder}/files/**/*.*`,
+  }, // folders and files need to watch for gulp
+  clean: buildFolder,
   buildFolder: buildFolder,
   srcFolder: srcFolder,
   ftp: ``,
