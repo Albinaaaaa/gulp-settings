@@ -8,12 +8,15 @@ const srcFolder = "./src"; // path for folder with sources
 // all information about the path specific file or folder
 export const path = {
   build: {
+    html: `${buildFolder}/`,
     files: `${buildFolder}/files/`,
   }, // result
   src: {
+    html: `${srcFolder}/*.html`,
     files: `${srcFolder}/files/**/*.*`,
   }, // original
   watch: {
+    html: `${srcFolder}/**/*.html`,
     files: `${srcFolder}/files/**/*.*`,
   }, // folders and files need to watch for gulp
   clean: buildFolder,
