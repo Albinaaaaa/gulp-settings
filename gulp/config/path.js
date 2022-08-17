@@ -8,14 +8,17 @@ const srcFolder = "./src"; // path for folder with sources
 // all information about the path specific file or folder
 export const path = {
   build: {
+    css: `${buildFolder}/css/`,
     html: `${buildFolder}/`,
     files: `${buildFolder}/files/`,
   }, // result
   src: {
+    scss: `${srcFolder}/scss/style.scss`,
     html: `${srcFolder}/*.html`,
     files: `${srcFolder}/files/**/*.*`,
   }, // original
   watch: {
+    scss: `${srcFolder}/scss/**/*.scss`,
     html: `${srcFolder}/**/*.html`,
     files: `${srcFolder}/files/**/*.*`,
   }, // folders and files need to watch for gulp
