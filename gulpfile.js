@@ -7,6 +7,8 @@ import { plugins } from "./gulp/config/plugins.js";
 
 // pass value into global variable where we will save all (ways and main module)
 global.app = {
+  isBuild: process.argv.includes("--build"),
+  isDev: !process.argv.includes("--build"),
   path: path,
   gulp: gulp,
   plugins: plugins,
@@ -45,6 +47,11 @@ const mainTasks = gulp.series(
 
 // scenery building execution tasks
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
+const build = gulp.series(reset, mainTasks);
+
+// export the scenery
+export { dev };
+export { build };
 
 // performing the scenery by default
 gulp.task("default", dev);
