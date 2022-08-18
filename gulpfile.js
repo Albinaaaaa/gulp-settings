@@ -24,6 +24,7 @@ import { js } from "./gulp/tasks/js.js";
 import { images } from "./gulp/tasks/images.js";
 import { otfToTtf, ttfToWoff, fontsStyle } from "./gulp/tasks/fonts.js";
 import { svgSprive } from "./gulp/tasks/svgSprive.js";
+import { zip } from "./gulp/tasks/zip.js";
 
 // watcher for the changes in files
 function watcher() {
@@ -48,10 +49,12 @@ const mainTasks = gulp.series(
 // scenery building execution tasks
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTasks);
+const deployZIP = gulp.series(reset, mainTasks, zip);
 
 // export the scenery
 export { dev };
 export { build };
+export { deployZIP };
 
 // performing the scenery by default
 gulp.task("default", dev);
