@@ -5,7 +5,7 @@
 **Open git bash** *Ctrl + Shift + ~*
 
 **Create package.json**
-
+_package.json_ - main file that contains settings and information about installed pakets
 *npm init*
 
 firsly asked about name of folder
@@ -15,7 +15,7 @@ firsly asked about name of folder
 npm i gulp-cli -g
 
 **Install gulp locally**
-
+(need for every project)
 npm i gulp -D
 
 ***File structure***
